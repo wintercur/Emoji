@@ -78,6 +78,10 @@
     border-bottom: 1px solid rgb(255, 255, 255);
     outline: none;
     background: transparent;
+    display: -webkit-box;/* для поддержки ранних версий браузеров */
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
 }
 
 .submit-btn{
@@ -98,7 +102,7 @@
 span{
     color: rgb(255, 255, 255);
     font-size: 14px;
-    bottom: -138px;
+    bottom: -128px;
     position: absolute;
 }
 .check-box1{
@@ -107,7 +111,7 @@ span{
 span1{
     color: rgb(255, 255, 255);
     font-size: 14px;
-    bottom: -188px;
+    bottom: -168px;
     position: absolute;
 }
 #login{
@@ -140,13 +144,13 @@ span1{
 }
 .style-1{
     width: 300px;
-    margin: -370px 30px;
+    margin: -360px 30px;
     color:#a11d06f1;
     /* font-family: Arial, sans-serif; */
 }
 .style-2{
     width: 300px;
-    margin: -420px -12px;
+    margin: -400px -14px;
     text-align: center;
     color:#a11d06f1;
     /* font-family: Arial, sans-serif; */

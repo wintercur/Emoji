@@ -63,6 +63,10 @@
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    display: -webkit-box;/* для поддержки ранних версий браузеров */
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
 }
 
 .submit-btn{
@@ -77,12 +81,12 @@
     border-radius: 30px;
 }
 .check-box{
-    margin: 25px 10px 0;
+    margin: 20px 10px 0;
 }
 span{
     color: #777;
     font-size: 14px;
-    bottom: -138px;
+    bottom: -123px;
     position: absolute;
 }
 .check-box1{
@@ -91,7 +95,7 @@ span{
 span1{
     color: #777;
     font-size: 14px;
-    bottom: -188px;
+    bottom: -168px;
     position: absolute;
 }
 #login{
@@ -108,10 +112,6 @@ span1{
 .social-icons img{
     width: 48px;
     margin: 3 12px;
-    /* box-shadow: 0 0 20px 0 #7f7f7f3d; */
-    /* border-width:1px; */
-    /* border-style: solid; */
-    /* padding: 1px; */
     cursor: pointer;
     border-radius: 50%;
 }
@@ -126,14 +126,12 @@ span1{
 }
 .style-1{
     width: 300px;
-    margin: -370px 30px;
-    /* font-family: Arial, sans-serif; */
+    margin: -360px 30px;
 }
 .style-2{
     width: 300px;
-    margin: -420px -12px;
+    margin: -400px -14px;
     text-align: center;
-    /* font-family: Arial, sans-serif; */
 }
 .class-icon{
     position: absolute;
