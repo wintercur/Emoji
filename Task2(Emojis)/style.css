@@ -1,0 +1,76 @@
+html, body {
+   font-family: 'Helvetica', Arial, sans-serif;
+   background: #74276C;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   background-size: 100%;
+   background-attachment: fixed;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+}
+
+img {
+   width: 50px;
+   margin: 20px 30px;
+   transition: transform .3s;
+   font: bold 12 px Verdana, sans-serif;
+   padding: 10px
+}
+
+img:hover {
+   transform: scale(1.8);
+}
+div.figure {
+  border-top: none;
+  padding-top: 0;
+}
+div.figure p + p {
+  padding: 0.5em;
+  border: solid;
+  border-bottom: none;
+}
+.return
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    padding-left: 0%;
+    padding-right: 0%;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+span
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-flow: column-reverse;
+    -ms-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    columns: 2 auto;
+    columns: auto 12em;
+    columns: auto auto;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px;
+}

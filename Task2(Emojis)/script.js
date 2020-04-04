@@ -1,22 +1,29 @@
-const getEmojis = () => (
-    fetch('https://api.github.com/emojis')
-      .then((response) => response.json())
-      .catch((error) => console.error(error))
-  );
+document.addEventListener("DOMContentLoaded",() => {
+   span = document.querySelector("#emojis");
+   ul = document.querySelector("#emojis");
 
-  getEmojis().then((emojis) => {
-    const images = Object.entries(emojis).flatMap(
-      ([ name, image ]) => ({
-        name,
-        image
+   fetch("https://api.github.com/emojis", {
+      method: "GET"
+   })
+      .then(response => {
+         return response.json();
       })
-    );
-    images.forEach((emoji) => {
-      const image = new Image();
-      image.src = emoji.image;
-      image.title = emoji.name;
-      image.alt = emoji.name;
-      document.write('<p>'+emoji.name+'</p>');
-      document.body.appendChild(image);
-    });
+      .then(data => {
+         emojis = data;
+         keys = Object.keys(emojis);
+         Emojis("");
+      });
 });
+
+function Emojis() {
+   show = keys;
+   show.forEach(key => {
+      span = document.createElement("span");
+      img = document.createElement("img");
+      img.setAttribute("alt", key);
+      img.setAttribute("src", emojis[key]);
+      span.innerHTML = ":" + key + ":";
+      span.appendChild(img);
+      ul.appendChild(span);
+   });
+   }
