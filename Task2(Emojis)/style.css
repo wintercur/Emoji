@@ -54,8 +54,9 @@ div.figure p + p {
     align-items: center;
 }
 
-span
+td
 {
+   width: 190px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded",() => {
-   span = document.querySelector("#emojis");
-   ul = document.querySelector("#emojis");
+   td = document.querySelector("#emojis");
+   table = document.querySelector("#emojis");
 
    fetch("https://api.github.com/emojis", {
       method: "GET"
@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded",() => {
 function Emojis() {
    show = keys;
    show.forEach(key => {
-      span = document.createElement("span");
+      td = document.createElement("td");
       img = document.createElement("img");
       img.setAttribute("alt", key);
       img.setAttribute("src", emojis[key]);
-      span.innerHTML = ":" + key + ":";
-      span.appendChild(img);
-      ul.appendChild(span);
+      td.innerHTML = ":" + key + ":";
+      td.appendChild(img);
+      table.appendChild(td);
    });
    }
