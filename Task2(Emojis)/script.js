@@ -22,7 +22,7 @@ function Emojis() {
       img = document.createElement("img");
       img.setAttribute("alt", key);
       img.setAttribute("src", emojis[key]);
-      td.innerHTML = ":" + key + ":";
+      td.innerHTML = key;
       td.appendChild(img);
       table.appendChild(td);
    });
