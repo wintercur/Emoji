@@ -60,6 +60,8 @@
     border-radius: 30px;
 }
 .toggle-btn{
+    top: 0;
+    left: 0;
     padding: 10px 32px;
     color: #ffffff;
     cursor: pointer;

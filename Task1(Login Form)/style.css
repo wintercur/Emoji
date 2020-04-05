@@ -68,6 +68,8 @@
 }
 
 #btn{
+    top: 0;
+    left: 0;
     position: var(--absolute);
     width: 50%;
     height: 100%;
