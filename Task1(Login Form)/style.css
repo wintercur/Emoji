@@ -1,34 +1,61 @@
 :root {
-    --main-bg-color:linear-gradient(360deg, #ff195f,#ffad06);;
+    --main-bg-color:linear-gradient(360deg, #ff195f,#ffad06);
+    --color: (360deg, #ff195f,#ffad06);
+    --center: center;
+    --absolute: absolute;
+    --hidden: hidden;
+    --relative: relative;
   }
 *{
-    margin: 0;
-    padding: 10;
     font-family: sans-serif;
+    -webkit-box-pack: var(--center);
+    -webkit-justify-content: var(--center);
+    -ms-flex-pack: var(--center);
+    justify-content: var(--center);
+    align-items: var(--center);
+    -webkit-box-align: var(--center);
+    -webkit-align-items: var(--center);
+    -ms-flex-align: var(--center);
 }
 .hero{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(banner.jpg);
-    background-position: center;
+    background: rgb(255, 255, 255) url(banner.jpg);
+    background-position:var(--center);
     background-size: cover;
-    position: absolute;
+    position: var(--absolute);/*????*/
+    display: flex;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    justify-content: var(--center);
+    -webkit-box-pack: var(--center);
+    -webkit-justify-content: var(--center);
+    -ms-flex-pack: var(--center);
+    align-items: var(--center);
+    -webkit-box-align: var(--center);
+    -webkit-align-items: var(--center);
+    -ms-flex-align: var(--center);
 }
 .form-box{
     width: 350px;
     height: 600px;
-    position: relative;
-    margin: 4% auto;
+    position: var(--relative);
     background: #fff;
     padding: 10px;
-    overflow: hidden;
+    overflow: var(--hidden);
     border-radius: 40px;
 }
 
 .button-box{
     width: 220px;
-    margin: 180px auto;/* Кнопки Регистр и Входа */
-    position: relative;
+    margin: 120px auto;
+    position: var(--relative);
     border-radius: 30px;
 }
 .toggle-btn{
@@ -37,24 +64,27 @@
     background: transparent;
     border: 0;
     outline: none;
-    position: relative;
+    position: var(--relative);
 }
+
 #btn{
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 110px;
+    position: var(--absolute);
+    width: 50%;
     height: 100%;
     background: var(--main-bg-color);
     border-radius: 30px;
     transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
 }
 
 .input-group{
     top:250px;
-    position: absolute;
-    width: 290px;
+    position: var(--absolute);
+    width: 70%;
     transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
 }
 .input-field{
     width: 100%;
@@ -69,7 +99,7 @@
 }
 
 .submit-btn{
-    width: 85%;
+    width: 100%;
     padding: 10px 0px;
     cursor: pointer;
     display: block;
@@ -78,24 +108,34 @@
     border: 0;
     outline: none;
     border-radius: 30px;
+    -webkit-border-radius: 30px;
 }
+
+.submit-btn:hover,
+.submit-btn:active,
+.submit-btn:focus
+{
+    background: linear-gradient(120deg, #ffad06, #ff195f);
+    background: -o-linear-gradient(330deg, #ffad06, #ff195f);
+}
+
 .check-box{
     margin: 20px 10px 0;
+    display: inline-block;
 }
+
 span{
     color: #777;
-    font-size: 14px;
-    bottom: -123px;
-    position: absolute;
+    transform: translateY(100%);
+    position: var(--absolute);
 }
 .check-box1{
     margin: 25px 10px 0;
 }
 span1{
     color: #777;
-    font-size: 14px;
-    bottom: -168px;
-    position: absolute;
+    transform: translateY(45%);
+    position: var(--absolute);
 }
 #login{
     left: 50px;
@@ -105,23 +145,32 @@ span1{
 }
 
 .social-icons{
-    margin: 870px auto;
-    text-align: center;
+    margin: 870px;
+    text-align: var(--center);
 }
 .social-icons img{
     width: 48px;
-    margin: 3 12px;
+    margin: 12px;
     cursor: pointer;
     border-radius: 50%;
 }
 .logo{
-  margin: -400px auto;
-  text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: var(--center);
+    -webkit-justify-content: var(--center);
+    -ms-flex-pack: var(--center);
+    justify-content: var(--center);
+    text-align: var(--center);
 }
+
 .logo img{
-  width: 60px;
-  margin: 0 20px;
-  border-radius: 50%;
+    width: 60px;
+    margin: 0 20px;
+    border-radius: 50%;
+    position: relative;
 }
 .style-1{
     width: 300px;
@@ -129,26 +178,37 @@ span1{
 }
 .style-2{
     width: 300px;
-    margin: -415px -14px;
-    text-align: center;
+    margin: -410px 30px;
 }
 .class-icon{
-    position: absolute;
+    position: var(--absolute);
     top: 50%;
-    transform: translateY(350%);
-    width: 100%;
-    text-align: center;
+    -webkit-transform: translateY(360%);
+    -ms-transform: translateY(360%);
+    transform: translateY(360%);
+    width: 350px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: var(--center);
+    -webkit-justify-content: var(--center);
+    -ms-flex-pack: var(--center);
+    justify-content: var(--center);
+    text-align: var(--center);
   }
   .btn{
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin: 8px;
+    margin: 10px 13px 12px 1px;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
     color: #fff;
     background: var(--main-bg-color);
-    overflow: hidden;
-    position: relative;
+    overflow: var(--hidden);
+    position: var(--relative);
+
   }
   .btn i{
     line-height: 40px;

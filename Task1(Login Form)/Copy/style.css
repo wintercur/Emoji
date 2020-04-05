@@ -1,33 +1,62 @@
+:root {
+    --main-bg-color:#a11d06f1;
+    --center: center;
+    --absolute: absolute;
+    --hidden: hidden;
+    --relative: relative;
+  }
 *{
-    margin: 0;
-    padding: 10;
     font-family: sans-serif;
+    -webkit-box-pack: var(--center);
+    -webkit-justify-content: var(--center);
+    -ms-flex-pack: var(--center);
+    justify-content: var(--center);
+    align-items: var(--center);
+    -webkit-box-align: var(--center);
+    -webkit-align-items: var(--center);
+    -ms-flex-align: var(--center);
 }
 .hero{
     height: 100%;
     width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(banner.gif);
-    background-position: center;
+    background-position:var(--center);
     background-size: cover;
     position: absolute;
+    display: flex;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    justify-content: var(--center);
+    -webkit-box-pack: var(--center);
+    -webkit-justify-content: var(--center);
+    -ms-flex-pack: var(--center);
+    align-items: var(--center);
+    -webkit-box-align: var(--center);
+    -webkit-align-items: var(--center);
+    -ms-flex-align: var(--center);
 }
 .form-box{
     width: 350px;
     height: 600px;
-    position: relative;
+    position: var(--relative);
     margin: 4% auto;
-    /* background: rgb(255, 255, 255); */
     background-image: url(23444.jpg);
     background-position: center;
     padding: 10px;
-    overflow: hidden;
+    overflow: var(--hidden);
     border-radius: 40px;
 }
 
 .button-box{
     width: 220px;
-    margin: 180px auto;/* Кнопки Регистр и Входа */
-    position: relative;
+    margin: 180px auto;
+    position: var(--relative);
     border-radius: 30px;
 }
 .toggle-btn{
@@ -37,36 +66,29 @@
     background: transparent;
     border: 0;
     outline: none;
-    position: relative;
+    position: var(--relative);
 }
 #btn{
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 110px;
+    position: var(--absolute);
+    width: 50%;
     height: 100%;
-    background: #a11d06f1;
+    background: var(--main-bg-color);
     border-radius: 30px;
     transition: .5s;
-}
-.toggle-btn1{
-  padding: 60px 32px;
-  color: #a11d06f1;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  outline: none;
-  position: relative;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
 }
 ::placeholder {
   color: rgb(236, 236, 240);
   font-size: 1.2em;
 }
 .input-group{
-    top:250px;/* Горизантлн положен кноп "Войти" */
-    position: absolute;
-    width: 290px;
+    top:250px;
+    position: var(--absolute);
+    width: 70%;
     transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
 }
 .input-field{
     width: 100%;
@@ -78,41 +100,37 @@
     border-bottom: 1px solid rgb(255, 255, 255);
     outline: none;
     background: transparent;
-    display: -webkit-box;/* для поддержки ранних версий браузеров */
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
 }
 
 .submit-btn{
-    width: 85%;
+    width: 100%;
     padding: 10px 0px;
     cursor: pointer;
     display: block;
     margin: 30px 10px 0;
-    color: #ffffff;
-    background: #a11d06f1;
+    background: var(--main-bg-color);
     border: 0;
     outline: none;
     border-radius: 30px;
+    -webkit-border-radius: 30px;
+    color: #ffffff;
 }
 .check-box{
     margin: 25px 10px 0;
+    display: inline-block;
 }
 span{
     color: rgb(255, 255, 255);
-    font-size: 14px;
-    bottom: -128px;
-    position: absolute;
+    transform: translateY(100%);
+    position: var(--absolute);
 }
 .check-box1{
     margin: 25px 10px 0;
+    display: inline-block;
 }
 span1{
     color: rgb(255, 255, 255);
-    font-size: 14px;
-    bottom: -168px;
-    position: absolute;
+    transform: translateY(45%);
 }
 #login{
     left: 50px;
@@ -122,17 +140,17 @@ span1{
 }
 
 .social-icons{
-    margin: 870px auto;/* размещение иконок по вертикали */
-    text-align: center;
+    margin: 870px auto;
+    text-align: var(--center);
 }
 .social-icons img{
     width: 48px;
-    margin: 3 12px;
+    margin: 12px;
     cursor: pointer;
     border-radius: 50%;
 }
 .logo{
-  margin: -400px auto;/* размещение иконок по вертикали */
+  margin: -400px auto;
   text-align: center;
 }
 .logo img{
@@ -145,33 +163,39 @@ span1{
 .style-1{
     width: 300px;
     margin: -360px 30px;
-    color:#a11d06f1;
-    /* font-family: Arial, sans-serif; */
+    color:var(--main-bg-color);
 }
 .style-2{
     width: 300px;
-    margin: -400px -14px;
-    text-align: center;
-    color:#a11d06f1;
-    /* font-family: Arial, sans-serif; */
+    margin: -425px 30px;
+    color: var(--main-bg-color);
 }
 .class-icon{
     position: absolute;
     top: 50%;
     transform: translateY(350%);
     width: 100%;
-    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: var(--center);
+    -webkit-justify-content: var(--center);
+    -ms-flex-pack: var(--center);
+    justify-content: var(--center);
+    text-align: var(--center);
   }
   .btn{
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin: 8px;
+    margin: 10px 13px 12px 1px;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
     color: #ffffff;
-    background:#a11d06f1;
-    overflow: hidden;
-    position: relative;
+    background: var(--main-bg-color);
+    overflow: var(--hidden);
+    position: var(--relative);
   }
   .btn i{
     line-height: 40px;
